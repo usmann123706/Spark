@@ -14,8 +14,8 @@ After completing this lab you will be able to:
 
 ## Installing Modules
 
--!pip install pyspark==3.1.2 -q
--!pip install findspark -q
+  !pip install pyspark==3.1.2 -q
+  !pip install findspark -q
 
 # Regression Using Spark
 
