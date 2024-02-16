@@ -53,6 +53,7 @@ model = lr.fit(training_data)
 
 # Evaluate the Model
 predictions = model.transform(testing_data)  
+predictions.show(100)  
 evaluator = RegressionEvaluator(labelCol="MPG", predictionCol="prediction", metricName="r2")  
 r2 = evaluator.evaluate(predictions)  
 print("R Squared =", r2)  
