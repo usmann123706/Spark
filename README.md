@@ -52,7 +52,7 @@ lr = LinearRegression(featuresCol="features", labelCol="MPG")
 model = lr.fit(training_data)  
 
 # Evaluate the Model
-predictions = model.transform(testing_data)
-evaluator = RegressionEvaluator(labelCol="MPG", predictionCol="prediction", metricName="r2")
-r2 = evaluator.evaluate(predictions)
-print("R Squared =", r2)
+predictions = model.transform(testing_data)  
+evaluator = RegressionEvaluator(labelCol="MPG", predictionCol="prediction", metricName="r2")  
+r2 = evaluator.evaluate(predictions)  
+print("R Squared =", r2)  
