@@ -52,10 +52,10 @@ predictions.select("features", "prediction").show(n=5, truncate=False, vertical=
 predictions.groupBy('prediction').count().show()  
 
 # Predict using cluster details
-input_data = [(13.99,13.83,0.9183,5.119,3.383,5.234,4.781)]
-input_df = spark.createDataFrame(input_data, ['area', 'perimeter', 'compactness', 'length of kernel', 'width of kernel', 'asymmetry coefficient','length of kernel groove'])
-input_assembler = VectorAssembler(inputCols=['area', 'perimeter', 'compactness', 'length of kernel', 'width of kernel', 'asymmetry coefficient','length of kernel groove'], outputCol="features")
-input_transformed = input_assembler.transform(input_df)
-predictions = model.transform(input_transformed)
-predictions.select("features", "prediction").show()
-spark.stop()
+input_data = [(13.99,13.83,0.9183,5.119,3.383,5.234,4.781)]  
+input_df = spark.createDataFrame(input_data, ['area', 'perimeter', 'compactness', 'length of kernel', 'width of kernel', 'asymmetry coefficient','length of kernel groove'])  
+input_assembler = VectorAssembler(inputCols=['area', 'perimeter', 'compactness', 'length of kernel', 'width of kernel', 'asymmetry coefficient','length of kernel groove'], outputCol="features")  
+input_transformed = input_assembler.transform(input_df)  
+predictions = model.transform(input_transformed)  
+predictions.select("features", "prediction").show()  
+spark.stop()  
